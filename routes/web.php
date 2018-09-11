@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/saludar/{nombre}/{apellido?}', 'MiControlador@saludar');
