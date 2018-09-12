@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/saludar/{nombre}/{apellido?}', 'MiControlador@saludar');
+Route::get('/precios', 'NuevoControlador@precios')->name('precios');
+Route::get('/acerca', 'NuevoControlador@acerca')->name('acerca');
+Route::get('/', 'NuevoControlador@principal')->name('principal');
