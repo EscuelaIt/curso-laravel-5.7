@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/precios', 'NuevoControlador@precios')->name('precios');
-Route::get('/acerca', 'NuevoControlador@acerca')->name('acerca');
-Route::get('/', 'NuevoControlador@principal')->name('principal');
+Route::get('estudiantes/mostrar', 'EstudianteController@mostrarTodos');
+
+Route::get('/', function () {
+    return view('welcome');
+});
