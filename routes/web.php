@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('estudiantes/mostrar', 'EstudianteController@mostrarTodos');
+Route::get('generic/mostrar/{id?}', 'GenericController@mostrar');
 
 Route::get('/', function () {
     return view('welcome');

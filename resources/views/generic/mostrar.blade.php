@@ -18,16 +18,16 @@
                             <th>Nombre</th>
                             <th>Direccion</th>
                             <th>Telefono</th>
-                            <th>Carrera</th>
+                            <th>Profesion</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($estudiantes as $estudiante)
+                        @foreach ($valores as $valor)
                         <tr>
-                            <td>{{$estudiante->nombre}}</td>
-                            <td>{{$estudiante->direccion}}</td>
-                            <td>{{$estudiante->telefono}}</td>
-                            <td>{{$estudiante->carrera}}</td>
+                            <td>{{$valor->nombre}}</td>
+                            <td>{{$valor->direccion}}</td>
+                            <td>{{$valor->telefono}}</td>
+                            <td>{{$valor->profesion}}</td>
                         </tr>
                         @endforeach
                     </tbody>
