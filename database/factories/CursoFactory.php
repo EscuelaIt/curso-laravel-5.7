@@ -8,7 +8,7 @@ $factory->define(App\Curso::class, function (Faker $faker) {
 
     return [
         'titulo' => $faker->sentence(mt_rand(2, 4)),
-        'descripcion' => $faker->paragraph(4),
+        'descripcion' => $faker->paragraph(2),
         'profesor_id' => $profesores->random()->id,
     ];
 });

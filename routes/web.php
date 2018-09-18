@@ -12,7 +12,9 @@
 */
 
 Route::get('generic/mostrar/{id?}', 'GenericController@mostrar');
+Route::post('cursos/crear', 'GenericController@crear')->name('cursos.create');
 
 Route::get('/', function () {
-    return view('welcome');
+    dd(App::environment());
+    return config('app.debug') ? 'true' : 'false';
 });

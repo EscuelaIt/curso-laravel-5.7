@@ -17,12 +17,12 @@ class DatabaseSeeder extends Seeder
         factory(Profesor::class, 50)->create();
 
         $cantidadEstudiantes = 500;
-        factory(Estudiante::class, $cantidadEstudiantes)->create();
+        $estudiantes = factory(Estudiante::class, $cantidadEstudiantes)->create();
 
         $cursos = factory(Curso::class, 40)->create()
-            ->each(function ($curso) use ($cantidadEstudiantes) {
+            ->each(function ($curso) use ($estudiantes) {
                 $curso->estudiantes()
-                    ->attach(array_rand(range(1, $cantidadEstudiantes), 40));
+                    ->attach($estudiantes->random(40)->pluck('id'));
             });
 
     }
