@@ -1,5 +1,6 @@
 <?php
 
+use App\User;
 use App\Curso;
 use App\Profesor;
 use App\Estudiante;
@@ -14,6 +15,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        factory(User::class, 15)->create();
+
         factory(Profesor::class, 50)->create();
 
         $cantidadEstudiantes = 500;

@@ -10,6 +10,9 @@ class GenericController extends Controller
 {
     public function mostrar($id = null)
     {
+        $cursos = Curso::get(['id', 'titulo']);
+
+        dd($cursos);
         return view('generic.crear')->with([
             'profesores' => Profesor::all(),
         ]);
@@ -26,7 +29,5 @@ class GenericController extends Controller
         $request->validate($reglas);
 
         $curso = Curso::create($request->all());
-
-        dd($curso);
     }
 }
