@@ -1,5 +1,6 @@
 <?php
 
+use App\Post;
 use App\User;
 use App\Curso;
 use App\Profesor;
@@ -16,6 +17,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         factory(User::class, 15)->create();
+
+        factory(Post::class, 15)->create();
 
         factory(Profesor::class, 50)->create();
 

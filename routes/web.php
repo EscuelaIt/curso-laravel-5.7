@@ -16,7 +16,10 @@
 
 Auth::routes();
 
-Route::get('/home/prueba', 'HomeController@prueba')->name('prueba') /*->middleware('prueba:5,hola,true')*/;
+Route::get('posts/{post_slug}', 'PostController@show');
+// Route::resource('posts', 'PostController')->only(['show']);
+
+Route::get('/generic/prueba/{curso}', 'GenericController@prueba')->name('prueba');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', function () {
