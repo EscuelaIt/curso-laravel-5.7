@@ -1,14 +1,12 @@
+// import Echo from 'laravel-echo'
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+// window.Pusher = require('pusher-js');
 
-// Variables
-@import 'variables';
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
-
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: process.env.MIX_PUSHER_APP_KEY,
+//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+//     encrypted: true
+// });
+// Bulma
+@import '~bulma';

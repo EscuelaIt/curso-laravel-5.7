@@ -12,4 +12,12 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+   .sass('resources/sass/app.scss', 'public/css')
+   .copy('node_modules/buffer/bin/update-authors.sh', 'public/sh/update-authors.sh')
+   .version()
+   .browserSync({
+        host: 'miproyecto.sync',
+        open: 'external',
+        proxy: 'miproyecto.test',
+        browser: 'Chrome',
+   });
